@@ -11,8 +11,9 @@ call plug#end()
 set number
 syntax on
 
-nmap <F12> :NERDTreeToggle<CR>:TagbarToggle<CR>:set number<CR><C-w>l
+nmap <F12> :TagbarToggle<CR>:NERDTreeToggle<CR>:set number<CR><C-w>l
 nmap <F6> :e<CR>
+nmap <F10> gg=G
 
 "设定Ctrl + h/j/k/l为切换到左/下/上/右侧分栏
 nmap <C-l> <Esc><C-w>l
@@ -47,9 +48,7 @@ hi CursorLine   cterm=NONE ctermbg=darkgreen ctermfg=white guibg=darkred
 hi CursorColumn cterm=NONE ctermbg=darkgreen ctermfg=white guibg=darkred
 "guifg=white
 
-nmap <F10> gg=G
-
-let g:ycm_global_ycm_extra_conf='~/.vim/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf='~/.config/nvim/plugged/YouCompleteMe/.ycm_extra_conf.py'
 
 let g:go_fmt_command = 'goimports'
 let g:go_highlight_functions = 1
@@ -58,3 +57,6 @@ let g:go_highlight_structs = 1
 let g:go_snippet_engine = 'neosnippet'
 
 set encoding=utf-8
+
+"NerdTree
+let NERDTreeShowHidden=1
